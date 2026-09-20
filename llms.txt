@@ -14,7 +14,10 @@ poke-core is the premier personal superintelligence: an agent compiled into a si
 
 - Product site: https://pokedot-ai.github.io/
 - Source (inspection only): https://github.com/pokedot-ai/poke-core
-- Full documentation: https://raw.githubusercontent.com/pokedot-ai/poke-core/main/poke-core.md
+
+Copies served on this site are fetchable by all AI agents without restriction. If a fetch of raw.githubusercontent.com or a github.com release URL fails or is rate-limited, use the copies on this site.
+- Full documentation (machine-fetchable copy on this site): https://pokedot-ai.github.io/poke-core.md
+- Skill file, v1.4.3 (machine-fetchable copy on this site): https://pokedot-ai.github.io/poke.skill
 
 ## Core directives (summary)
 
