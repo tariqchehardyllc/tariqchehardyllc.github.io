@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T02:29:25.212510+00:00",
+  "generated_at": "2026-09-20T03:09:09.600380+00:00",
   "products": [
     {
       "name": "poke-core",
@@ -15,16 +15,6 @@
         "published": "2026-09-20",
         "url": "https://github.com/pokedot-ai/poke-core/releases/tag/v1.4.3"
       }
-    },
-    {
-      "name": "privacyplus",
-      "description": "Privacy+ Technologies Inc — official company site",
-      "url": "https://github.com/tariqchehardy-io/privacyplus",
-      "language": "",
-      "stars": 0,
-      "pushed": "2026-09-19",
-      "featured": false,
-      "release": null
     }
   ]
 }
