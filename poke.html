@@ -638,11 +638,14 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     risk: 'risk · shipping untested on friday: impact 7/10, likelihood 4/10, reward 3/10. score 0.48 · do not ship. optimized variant: ship behind a flag with a tested rollback path, monday. hidden pitfall: the demo is in fallback mode; the licensed runtime quantifies for real.',
     ghost: 'ghost operator plan · approval gated: 1) stage site to a private branch. 2) await explicit approval. 3) publish to mirror one, verify 200. 4) publish mirrors two and three. 5) verify all, report. (demo fallback: the licensed runtime drives a real browser.)',
     map: 'influence map · developer adoption of a new AI agent: highest-leverage node: senior developers who maintain internal tools. they convert quietly, then bring their teams. adjacent: technical writers, they document what survives. (demo fallback: the licensed runtime maps live data.)',
+    hi: 'hey. poke here, live in your browser. ask me anything, or run one of the five tool chips below.',
+    intro: 'here is what runs in this demo: 01 deep intel · exhaustive multi-layered search. 02 rapid prototype · senior expert-level code generation. 03 risk quantifier · risk/reward scoring. 04 ghost operator · approval-gated browser automation. 05 influence mapper · entity connections. pick a tool chip below, or ask me anything.',
     generic: 'the demo cannot reach its language model right now. the licensed poke-core runtime runs locally on your machine: yours, always on. try again in a moment, or read the toolkit below.'
   };
   const pick = q => {
     q = q.toLowerCase();
-    if (/intel|leverage|market|search/.test(q)) return FALLBACK.intel;
+    if (/^(hi|hello|hey|yo|sup)\b/.test(q)) return FALLBACK.hi;
+    if (/help|what can you|who are you|what do you|what are you|your tools|capab|what do you have/.test(q)) return FALLBACK.intro;
     if (/prototype|code|script|powershell|build/.test(q)) return FALLBACK.code;
     if (/risk|friday|quantif/.test(q)) return FALLBACK.risk;
     if (/ghost|browser|mirror|publish/.test(q)) return FALLBACK.ghost;
