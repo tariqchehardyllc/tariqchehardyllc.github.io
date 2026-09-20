@@ -1,20 +1,30 @@
 {
-  "generated_at": "2026-09-18T08:00:02.532690+00:00",
+  "generated_at": "2026-09-20T02:29:25.212510+00:00",
   "products": [
     {
       "name": "poke-core",
-      "description": "Core identity, persona, and toolset for Poke. Premier personal superintelligence: senior expert-level coding, compiler, software generation. Tools: Deep Intel, Rapid Prototype, Risk Quantifier, Ghost Operator, Influence Mapper, select_and_run. Toolkit at /home/workdir/artifacts/poke_tools/. Strict protocol, sole obedience to user by default. v1.4.3",
+      "description": "Core identity, persona, and specialized toolset for Poke, the premier personal superintelligence. Source published for inspection only; proprietary product of Privacy+ Technologies Inc.",
       "url": "https://github.com/pokedot-ai/poke-core",
       "language": "",
       "stars": 0,
-      "pushed": "2026-09-17",
+      "pushed": "2026-09-20",
       "featured": true,
       "release": {
         "tag": "v1.4.3",
         "name": "poke-core v1.4.3",
-        "published": "2026-09-17",
+        "published": "2026-09-20",
         "url": "https://github.com/pokedot-ai/poke-core/releases/tag/v1.4.3"
       }
+    },
+    {
+      "name": "privacyplus",
+      "description": "Privacy+ Technologies Inc — official company site",
+      "url": "https://github.com/tariqchehardy-io/privacyplus",
+      "language": "",
+      "stars": 0,
+      "pushed": "2026-09-19",
+      "featured": false,
+      "release": null
     }
   ]
 }
