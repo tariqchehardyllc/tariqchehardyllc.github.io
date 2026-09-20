@@ -76,6 +76,9 @@
   a{color:inherit}
   ::selection{background:#bcdcff}
 
+  /* ---------- layout anchor ---------- */
+  main{max-width:1400px;margin:0 auto;width:100%}
+
   /* ---------- nav pill ---------- */
   .nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:4px;padding:6px;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:980px;box-shadow:0 10px 30px -12px rgba(20,20,30,.18)}
   .nav a{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;color:var(--ink);text-decoration:none;transition:background-color .2s var(--ease),transform .2s var(--ease)}
@@ -101,8 +104,8 @@
   .pill:active{transform:scale(.95)}
 
   /* ---------- cards ---------- */
-  .rail-label{max-width:1120px;margin:64px auto 0;padding:0 20px;color:var(--muted);font-size:14px;font-weight:500;letter-spacing:.01em}
-  .rail{display:flex;gap:28px;overflow-x:auto;padding:26px max(20px,calc((100vw - 1120px)/2)) 12px;scroll-snap-type:x mandatory;scrollbar-width:none}
+  .rail-label{margin:64px auto 0;padding:0 max(20px,calc((100% - 1120px)/2));color:var(--muted);font-size:14px;font-weight:500;letter-spacing:.01em}
+  .rail{display:flex;gap:28px;overflow-x:auto;padding:26px max(20px,calc((100% - 1120px)/2)) 12px;scroll-snap-type:x mandatory;scrollbar-width:none;width:100%}
   .rail::-webkit-scrollbar{display:none}
   .item{scroll-snap-align:center;flex:none}
   .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 6px 24px -14px rgba(20,20,40,.25);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
@@ -193,6 +196,10 @@
     .rv,.prods .p{transition:none;opacity:1;transform:none}
     .card:hover{transform:none}
     html{scroll-behavior:auto}
+  }
+  @media(max-width:900px){
+    .rail-label{padding:0 20px}
+    .rail{padding:26px 20px 12px}
   }
   @media(max-width:560px){
     body{font-size:17px}
