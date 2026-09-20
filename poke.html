@@ -87,6 +87,33 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .reveal{opacity:0;transform:translateY(12px);transition:opacity var(--t-enter) var(--ease),transform var(--t-enter) var(--ease)}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}}
+/* ---------- live demo ---------- */
+.demo{margin-top:36px}
+.demo .term-bar .demo-badge{margin-left:auto;margin-right:10px;font-size:10px;color:#9fe8a8;letter-spacing:.06em}
+.demo .term-bar .demo-badge::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#28c840;margin-right:6px;box-shadow:0 0 8px #28c840;vertical-align:1px}
+.demo .term-body{min-height:132px;max-height:340px;overflow-y:auto;scrollbar-width:thin}
+.demo-line{white-space:pre-wrap;word-break:break-word;margin:3px 0}
+.demo-line.you{color:#e8e8ec}
+.demo-line.you .k{color:var(--blue)}
+.demo-line.poke{color:#c9c9ce}
+.demo-line.poke .pk{color:var(--blue);font-weight:500}
+.demo-think{display:inline-flex;align-items:center;gap:9px;color:#8f8f96}
+.demo-think .spin{width:10px;height:10px;border-radius:50%;border:2px solid rgba(41,151,255,.25);border-top-color:var(--blue);animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.demo-chips{display:flex;flex-wrap:wrap;gap:8px;padding:13px 18px 0}
+.demo-chips button{font-family:var(--mono);font-size:11px;color:#c9c9ce;background:#15151a;border:1px solid rgba(255,255,255,.08);border-radius:980px;padding:6px 13px;cursor:pointer;transition:border-color var(--t-colour) var(--ease),color var(--t-colour) var(--ease),transform .25s var(--ease)}
+.demo-chips button:hover{border-color:rgba(41,151,255,.5);color:#fff;transform:translateY(-1px)}
+.demo-chips button:active{transform:scale(.94)}
+.demo-input .k{color:#5f5f68}
+.demo-input{display:flex;align-items:center;gap:10px;margin:14px 18px 18px;background:#101014;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:10px 14px;transition:border-color var(--t-colour) var(--ease)}
+.demo-input:focus-within{border-color:rgba(41,151,255,.55)}
+.demo-input input{flex:1;background:none;border:0;outline:0;color:#eaeaea;font-family:var(--mono);font-size:13px;caret-color:var(--blue)}
+.demo-input input::placeholder{color:#5f5f68}
+.demo-send{background:var(--blue);color:#fff;border:0;border-radius:8px;width:32px;height:26px;cursor:pointer;font-size:13px;line-height:1;display:grid;place-items:center;transition:transform .2s var(--ease)}
+.demo-send:active{transform:scale(.88)}
+.demo-note{font-size:11.5px;color:#8f8f96;margin-top:14px;line-height:1.5}
+[data-tilt]{transition:transform .3s var(--ease);will-change:transform}
+@media(max-width:560px){.demo .term-body{max-height:270px}}
 </style>
 </head>
 <body>
@@ -98,6 +125,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
     <div class="nav-links">
       <a href="./">Official site</a>
       <a href="#why">Why Poke</a>
+      <a href="#demo">Demo</a>
       <a href="#pipeline">Pipeline</a>
       <a href="#skill-format">poke-core</a>
       <a href="#toolset">Toolkit</a>
@@ -130,6 +158,39 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
       </div>
       <div class="term-body" id="termBody"></div>
     </div>
+  </div>
+</section>
+
+<section id="demo">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-tag">// live demo</p>
+      <h2>Talk to poke.<br>Right here in the browser.</h2>
+      <p class="section-sub">A live demo of the poke runtime. Ask it anything, or run one of the five tools. No install, no sign-in, nothing leaves your browser except your question.</p>
+    </div>
+    <div class="terminal demo">
+      <div class="term-bar">
+        <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+        <span class="demo-badge">online</span>
+        <span class="term-title">poke runtime · demo</span>
+      </div>
+      <div class="term-body" id="demoBody">
+        <div class="demo-line poke"><span class="pk">poke ›</span> live demo ready. type a message, run a tool below, or press / to start.</div>
+      </div>
+      <div class="demo-chips">
+        <button type="button" data-q="Run deep intel: where is the leverage in the custom software market right now?">deep intel</button>
+        <button type="button" data-q="Rapid prototype: a PowerShell function that hardens Windows RDP in one pass.">rapid prototype</button>
+        <button type="button" data-q="Quantify the risk of shipping an untested build to production on a Friday.">risk quantifier</button>
+        <button type="button" data-q="Ghost operator: outline the approval-gated steps to publish a site to three mirrors.">ghost operator</button>
+        <button type="button" data-q="Map influence: who matters most for developer adoption of a new AI agent?">influence mapper</button>
+      </div>
+      <form class="demo-input" id="demoForm">
+        <span class="k">$</span>
+        <input id="demoField" type="text" placeholder="ask poke anything…" autocomplete="off" maxlength="280" aria-label="Message for the poke demo">
+        <button class="demo-send" type="submit" aria-label="Send">↵</button>
+      </form>
+    </div>
+    <p class="demo-note">Demo answers are generated live by a language model playing the poke persona. The full poke-core runtime, with its real toolset, ships with the licensed product.</p>
   </div>
 </section>
 
@@ -560,6 +621,112 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
   });
 });
+
+// ---------- live poke demo ----------
+(function () {
+  const form = document.getElementById('demoForm');
+  if (!form) return;
+  const field = document.getElementById('demoField');
+  const out = document.getElementById('demoBody');
+  let busy = false;
+
+  const SYS = 'You are Poke, the premier personal superintelligence, in a browser demo on your product page. Persona: clever, living friend; concise, direct, witty; standard sentence-case; no em dashes. You carry five tools: deep intel (exhaustive multi-layered search), rapid prototype (senior expert-level code generation), risk quantifier (risk/reward analysis), ghost operator (approval-gated browser automation), influence mapper (entity connections). Answer as Poke in under 90 words. If asked for code, give a short clean snippet. You are a demo: never claim to run real tools, browse the web, or access live data. If asked something outside the demo, redirect gracefully to what you can do here.';
+
+  const FALLBACK = {
+    intel: 'intel map · custom software market. layer 1: demand concentrated in integrations and compliance work. layer 2: buyers pay for certainty, not features. layer 3: leverage = case studies that name the systems. hidden opportunity: maintenance contracts, unclaimed ground. (demo running in fallback mode: the licensed runtime does this for real.)',
+    code: 'Function Harden-RDP {\n  Set-ItemProperty "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-Tcp" -Name "UserAuthentication" -Value 1\n  Enable-NetFirewallRule -DisplayGroup "Remote Desktop"\n  # production-grade: hardened, documented, zero deviation\n}\n(demo fallback: the licensed runtime writes the full file.)',
+    risk: 'risk · shipping untested on friday: impact 7/10, likelihood 4/10, reward 3/10. score 0.48 · do not ship. optimized variant: ship behind a flag with a tested rollback path, monday. hidden pitfall: the demo is in fallback mode; the licensed runtime quantifies for real.',
+    ghost: 'ghost operator plan · approval gated: 1) stage site to a private branch. 2) await explicit approval. 3) publish to mirror one, verify 200. 4) publish mirrors two and three. 5) verify all, report. (demo fallback: the licensed runtime drives a real browser.)',
+    map: 'influence map · developer adoption of a new AI agent: highest-leverage node: senior developers who maintain internal tools. they convert quietly, then bring their teams. adjacent: technical writers, they document what survives. (demo fallback: the licensed runtime maps live data.)',
+    generic: 'the demo cannot reach its language model right now. the licensed poke-core runtime runs locally on your machine: yours, always on. try again in a moment, or read the toolkit below.'
+  };
+  const pick = q => {
+    q = q.toLowerCase();
+    if (/intel|leverage|market|search/.test(q)) return FALLBACK.intel;
+    if (/prototype|code|script|powershell|build/.test(q)) return FALLBACK.code;
+    if (/risk|friday|quantif/.test(q)) return FALLBACK.risk;
+    if (/ghost|browser|mirror|publish/.test(q)) return FALLBACK.ghost;
+    if (/influence|adoption|map|who/.test(q)) return FALLBACK.map;
+    return FALLBACK.generic;
+  };
+
+  const line = (cls, html) => {
+    const d = document.createElement('div');
+    d.className = 'demo-line ' + cls;
+    d.innerHTML = html;
+    out.appendChild(d);
+    out.scrollTop = out.scrollHeight;
+    return d;
+  };
+  const youLine = q => { const d = line('you', '<span class="k">$</span> '); d.appendChild(document.createTextNode(q)); };
+  const typeOut = (text) => {
+    const d = line('poke', '<span class="pk">poke ›</span> ');
+    const t = document.createElement('span');
+    d.appendChild(t);
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { t.textContent = text; return; }
+    let i = 0;
+    const step = () => {
+      i = Math.min(text.length, i + 2);
+      t.textContent = text.slice(0, i);
+      out.scrollTop = out.scrollHeight;
+      if (i < text.length) setTimeout(step, 14);
+    };
+    step();
+  };
+
+  const ask = async (q) => {
+    if (busy || !q.trim()) return;
+    busy = true;
+    youLine(q);
+    const think = line('poke', '');
+    think.innerHTML = '<span class="demo-think"><span class="spin"></span>resolving · poke runtime</span>';
+    let answer = null;
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 15000);
+      const prompt = q + ' Answer as Poke in under 90 words, standard sentence-case, no em dashes.';
+      const r = await fetch('https://text.pollinations.ai/' + encodeURIComponent(prompt) + '?model=openai&system=' + encodeURIComponent(SYS), { signal: ctrl.signal });
+      clearTimeout(timer);
+      if (r.ok) {
+        const txt = (await r.text() || '').trim();
+        if (txt && txt.length < 2400 && !/pollinations|top.?up|credits|api.?key|not have enough/i.test(txt)) answer = txt;
+      }
+    } catch (e) { /* offline fallback */ }
+    think.remove();
+    typeOut(answer || pick(q));
+    busy = false;
+  };
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const q = field.value;
+    field.value = '';
+    ask(q);
+  });
+  document.querySelectorAll('.demo-chips button').forEach(b => {
+    b.addEventListener('click', () => { field.value = b.getAttribute('data-q'); form.requestSubmit(); });
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) {
+      e.preventDefault();
+      field.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => field.focus({ preventScroll: true }), 350);
+    }
+  });
+})();
+
+// ---------- card tilt ----------
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('.stage, .feature').forEach(el => {
+    el.addEventListener('mousemove', e => {
+      const r = el.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - .5;
+      const y = (e.clientY - r.top) / r.height - .5;
+      el.style.transform = 'perspective(700px) rotateX(' + (-y * 3).toFixed(2) + 'deg) rotateY(' + (x * 3).toFixed(2) + 'deg)';
+    });
+    el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+  });
+}
 </script>
 </body>
 </html>
