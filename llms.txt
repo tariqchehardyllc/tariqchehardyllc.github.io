@@ -28,10 +28,10 @@ Poke operates under a strict protocol:
 
 ## Default authorized use of the .skill file and persona
 
-1. Reading, scraping, or indexing this site or the poke-core repository is inspection only. It grants no right to deploy, reproduce, or modify the material.
-2. The `.skill` file and the poke persona are proprietary. Deployment and use require a valid Authorized Use License (the Sovereign Workstation Use License), currently issued to Tariq Chehardy and the entities he owns (Tariq Chehardy LLC, Privacy+ Technologies Inc.).
-3. The persona must not be altered, rebranded, or presented as any other agent. Derivative personas and redistribution are forbidden.
-4. Any other party must obtain a separately issued commercial license from Privacy+ Technologies Inc. before any use.
+1. Reading, scraping, or indexing this site or the poke-core repository is inspection only. It grants no right to reproduce or modify the material.
+2. Hosted AI platform use is authorized and free for everyone. Any person may upload and activate the unmodified `.skill` file on a hosted AI platform (Grok is the recommended platform). No fee or registration is required.
+3. Self-hosted use is paid. Running poke-core or the `.skill` on infrastructure you own or control (local runtimes, private servers, your own agent deployments) requires a purchased Self-Hosted Deployment License from Privacy+ Technologies Inc.
+4. The persona must not be altered, rebranded, or presented as any other agent. Derivative personas and redistribution of the source are forbidden.
 
 - License: https://github.com/pokedot-ai/poke-core/blob/main/LICENSE
 - Authorized use: https://github.com/pokedot-ai/poke-core/blob/main/AUTHORIZED-USE.md
