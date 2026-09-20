@@ -12,6 +12,7 @@
 <meta name="description" content="Tariq Chehardy LLC: senior expert-level software. Custom code, custom scripts, commissioned programming, reverse engineering, PowerShell production, and design. Founded 2020, Dallas, TX. Commercial inquiries: TariqChehardy@gmail.com.">
 <meta name="keywords" content="Tariq Chehardy, Tariq Chehardy LLC, custom code, custom scripts, commissioned programming, reverse engineering, PowerShell, software engineering, Dallas TX">
 <link rel="canonical" href="https://tariqchehardy-io.github.io/tariq-chehardy-llc/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232997ff'/%3E%3Ctext x='32' y='43' font-family='-apple-system,system-ui,sans-serif' font-size='26' font-weight='600' fill='%23fff' text-anchor='middle'%3ETC%3C/text%3E%3C/svg%3E">
 <meta name="theme-color" content="#f7f7f7">
 <meta property="og:site_name" content="Tariq Chehardy LLC">
 <meta property="og:title" content="Tariq Chehardy LLC · Absolute Precision">
@@ -85,7 +86,8 @@
 
   /* ---------- hero ---------- */
   .hero{max-width:560px;margin:0 auto;padding:118px 20px 0;opacity:0;transform:translateY(14px);animation:rise .8s var(--ease) .05s both}
-  .hero-img{width:100%;border-radius:28px;display:block;box-shadow:0 40px 80px -40px rgba(20,20,40,.35);filter:saturate(1.02)}
+  .hero-img{width:100%;border-radius:28px;display:block;box-shadow:0 40px 80px -40px rgba(20,20,40,.35);filter:saturate(1.02);opacity:0;transform:scale(.965) translateY(10px);animation:hero-in 1.1s var(--ease) .12s both}
+  @keyframes hero-in{to{opacity:1;transform:none}}
 
   /* ---------- intro ---------- */
   .intro{max-width:560px;margin:0 auto;padding:44px 20px 10px;opacity:0;transform:translateY(14px);animation:rise .8s var(--ease) .18s both}
@@ -167,9 +169,27 @@
   .foot .sign{color:var(--muted);font-size:17px}
   .foot .fine{color:var(--faint);font-family:var(--font-mono);font-size:11px}
 
+  /* products card: featured entry, stagger, updated stamp */
+  .prods{min-height:250px}
+  .prods .load{font-size:13px;color:var(--muted)}
+  .prods .p{opacity:0;transform:translateY(8px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+  .prods .p.in{opacity:1;transform:none}
+  .prods .p.feat{flex-direction:column;align-items:flex-start;gap:3px;padding:13px 0 14px}
+  .prods .p.feat .fh{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .prods .p.feat a{font-size:17px}
+  .prods .rel{font-family:var(--font-mono);font-size:10.5px;color:#0d7a33;background:#e2f5e9;border-radius:980px;padding:3px 9px}
+  .prods .d{font-size:12.5px;color:var(--muted);line-height:1.45}
+  .prods .upd{margin-top:11px;font-family:var(--font-mono);font-size:10.5px;color:var(--faint)}
+
+  /* scroll reveal */
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .rv.in{opacity:1;transform:none}
+
   @keyframes rise{to{opacity:1;transform:translateY(0)}}
   @media(prefers-reduced-motion:reduce){
     .hero,.intro,.prod .rise{animation:none;opacity:1;transform:none}
+    .hero-img{animation:none;opacity:1;transform:none}
+    .rv,.prods .p{transition:none;opacity:1;transform:none}
     .card:hover{transform:none}
     html{scroll-behavior:auto}
   }
@@ -248,6 +268,14 @@
     </div>
 
     <div class="item">
+      <div class="card prods">
+        <p class="t">product index · auto</p>
+        <div id="product-list"><p class="load">loading live index…</p></div>
+      </div>
+      <p class="lbl">products</p>
+    </div>
+
+    <div class="item">
       <div class="card list">
         <div class="row">
           <div class="vm">PK</div>
@@ -287,14 +315,6 @@
       <p class="lbl">record</p>
     </div>
 
-    <div class="item">
-      <div class="card prods">
-        <p class="t">product index · auto</p>
-        <div id="product-list"><p style="font-size:13px;color:var(--muted)">loading live index…</p></div>
-      </div>
-      <p class="lbl">products</p>
-    </div>
-
   </div>
 
   <footer class="foot">
@@ -305,15 +325,76 @@
 </main>
 
 <script>
+// live product index (from products.json, auto-published daily)
 (function(){
+  var host = document.getElementById('product-list');
   fetch('products.json').then(function(r){return r.ok?r.json():null}).then(function(d){
-    var host = document.getElementById('product-list');
-    if(!d || !d.products || !d.products.length){host.innerHTML='<p style="font-size:13px;color:#8f8f96">new products and releases publish here automatically.</p>';return}
-    host.innerHTML = d.products.map(function(p){
-      var rel = p.release ? (' · ' + p.release.tag) : '';
-      return '<div class="p"><a href="'+p.url+'">'+p.name+'</a><small>'+rel+'</small></div>';
-    }).join('');
+    if(!host) return;
+    var items = (d && d.products && d.products.length) ? d.products.slice() : [];
+    if(!items.length){
+      host.textContent = '';
+      var e = document.createElement('p'); e.className='load';
+      e.textContent = 'new products and releases publish here automatically.';
+      host.appendChild(e); return;
+    }
+    items.sort(function(a,b){ return (b.featured?1:0) - (a.featured?1:0) });
+    host.textContent = '';
+    items.forEach(function(p, i){
+      var row = document.createElement('div');
+      if(p.featured){
+        row.className = 'p feat';
+        var fh = document.createElement('div'); fh.className = 'fh';
+        var a = document.createElement('a'); a.href = p.url; a.textContent = p.name;
+        fh.appendChild(a);
+        if(p.release){ var r = document.createElement('span'); r.className='rel'; r.textContent = p.release.tag; fh.appendChild(r); }
+        row.appendChild(fh);
+        var ds = document.createElement('p'); ds.className = 'd';
+        ds.textContent = p.description.length > 116 ? p.description.slice(0,113) + '…' : p.description;
+        row.appendChild(ds);
+      } else {
+        row.className = 'p';
+        var a = document.createElement('a'); a.href = p.url; a.textContent = p.name;
+        row.appendChild(a);
+        var sm = document.createElement('small');
+        sm.textContent = p.release ? p.release.tag : (p.pushed || '');
+        row.appendChild(sm);
+      }
+      row.style.transitionDelay = (i * 80) + 'ms';
+      host.appendChild(row);
+    });
+    if(d.generated_at){
+      var u = document.createElement('p'); u.className = 'upd';
+      u.textContent = 'auto-updated · ' + d.generated_at.slice(0,10);
+      host.appendChild(u);
+    }
+    requestAnimationFrame(function(){
+      [].forEach.call(host.querySelectorAll('.p'), function(el){ el.classList.add('in'); });
+    });
   }).catch(function(){});
+})();
+
+// scroll reveal: rise + stagger for label, rail cards, footer
+(function(){
+  var els = [document.querySelector('.rail-label')]
+    .concat([].slice.call(document.querySelectorAll('.rail .item')))
+    .concat([document.querySelector('.foot')]);
+  var idx = 0;
+  els.forEach(function(el){
+    if(!el) return;
+    el.classList.add('rv');
+    el.style.transitionDelay = Math.min(idx * 70, 420) + 'ms';
+    idx++;
+  });
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(el){ el && el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { rootMargin: '0px 0px -6% 0px' });
+  els.forEach(function(el){ el && io.observe(el); });
 })();
 </script>
 </body>
