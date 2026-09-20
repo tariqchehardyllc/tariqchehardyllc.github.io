@@ -3,17 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <title>Tariq Chehardy LLC · Senior Expert-Level Software</title>
-<noscript><style>.loader{display:none}</style></noscript>
+<noscript><style>.loader{display:none}  /* cube-motion system: press states, copy pills, replay */
+  [data-press]{transition-property:scale,background-color,color;transition-duration:.32s,var(--t-colour),var(--t-colour);transition-timing-function:var(--ease)}
+  [data-press]:active{transition-duration:.12s,var(--t-colour),var(--t-colour);scale:.97}
+  @media(prefers-reduced-motion:reduce){[data-press]:active{opacity:.8;scale:1}}
+  .install{height:36px;display:inline-flex;align-items:center;gap:8px;padding:0 6px 0 13px;margin-top:4px;max-width:100%;font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:var(--ink);background:#101010;border-radius:980px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1),0 6px 16px -8px rgba(0,0,0,.6)}
+  .install .cmd{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .copy,.replay{border:0;cursor:pointer;height:24px;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 11px;border-radius:980px;font:inherit;font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:500;color:#a1a1a6;background:#1a1a1a;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);transition:background-color var(--t-colour) var(--ease),color var(--t-colour) var(--ease);white-space:nowrap}
+  .copy:hover,.replay:hover{color:#fff;background:#222}
+  .copy:focus-visible,.replay:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .replay{position:absolute;right:12px;top:50%;transform:translateY(-50%);padding:0 9px;font-size:13px}
+  .faces{position:relative;display:inline-flex;align-items:center}
+  .face,.face-in{transition:opacity .22s var(--ease),filter .22s var(--ease),scale .22s var(--ease);will-change:opacity,filter,scale}
+  .face-in{position:absolute;inset:0;opacity:0;filter:blur(4px);scale:.92}
+  .copied .face{opacity:0;filter:blur(4px);scale:.92}
+  .copied .face-in{opacity:1;filter:blur(0);scale:1}
+  @media(max-width:560px){.install .cmd{max-width:56vw}}
+</style></noscript>
 <meta name="description" content="Tariq Chehardy LLC: senior expert-level software. Custom code, custom scripts, commissioned programming, reverse engineering, PowerShell production, and design. Founded 2020, Dallas, TX. Commercial inquiries: TariqChehardy@gmail.com.">
 <meta name="keywords" content="Tariq Chehardy, Tariq Chehardy LLC, custom code, custom scripts, commissioned programming, reverse engineering, PowerShell, software engineering, Dallas TX">
-<link rel="canonical" href="https://tariqchehardyllc.github.io/">
-<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://tariqchehardy-io.github.io/tariq-chehardy-llc/">
+<meta name="theme-color" content="#000000">
 <meta property="og:site_name" content="Tariq Chehardy LLC">
 <meta property="og:title" content="Tariq Chehardy LLC · Absolute Precision">
 <meta property="og:description" content="Senior expert-level software: custom code, custom scripts, commissioned programming, reverse engineering, and PowerShell production. Founded 2020. Built to production.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://tariqchehardyllc.github.io/">
+<meta property="og:url" content="https://tariqchehardy-io.github.io/tariq-chehardy-llc/">
 <meta property="og:image" content="https://media.base44.com/images/public/6a71440fb9c3dfe54999e201/eb94a6d42_generated_image.png">
 <meta property="og:image:alt" content="Tariq Chehardy LLC. Absolute precision. Built to production.">
 <meta property="og:locale" content="en_US">
@@ -27,7 +46,7 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Tariq Chehardy LLC",
-  "url": "https://tariqchehardyllc.github.io/",
+  "url": "https://tariqchehardy-io.github.io/tariq-chehardy-llc/",
   "logo": "https://media.base44.com/images/public/6a71440fb9c3dfe54999e201/eb94a6d42_generated_image.png",
   "description": "Senior expert-level software: custom code, custom scripts, commissioned programming, reverse engineering, PowerShell and internal production, and design.",
   "email": "TariqChehardy@gmail.com",
@@ -46,91 +65,86 @@
     "postalCode": "75246",
     "addressCountry": "US"
   },
-  "sameAs": ["https://github.com/tariqchehardyllc", "https://x.com/TariqChehardy"]
+  "sameAs": ["https://github.com/tariqchehardy-io", "https://x.com/TariqChehardy"]
 }
 </script>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='43' font-family='-apple-system,system-ui,sans-serif' font-size='26' font-weight='700' fill='%23fff' text-anchor='middle'%3ETC%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='43' font-family='-apple-system,system-ui,sans-serif' font-size='26' font-weight='700' fill='%23fff' text-anchor='middle'%3ETC%3C/text%3E%3C/svg%3E">
 <style>
-  .loader{position:fixed;inset:0;z-index:100;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;transition:opacity .45s ease,visibility .45s}
+  .loader{position:fixed;inset:0;z-index:100;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;transition:opacity .45s ease,visibility .45s}
   .loader.done{opacity:0;visibility:hidden}
-  .loader-mark{width:64px;height:64px;border-radius:16px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:26px}
+  .loader-mark{width:64px;height:64px;border-radius:16px;background:#101010;border:1px solid #292929;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:26px}
   .loader-bar{width:120px;height:3px;background:var(--line);border-radius:2px;overflow:hidden}
   .loader-bar i{display:block;height:100%;width:40%;background:var(--accent);border-radius:2px;animation:loadslide 1s ease-in-out infinite}
   @keyframes loadslide{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}
   @media(prefers-reduced-motion:reduce){.loader-bar i{animation:none}}
   :root{
-    --bg:#ffffff; --bg-soft:#f5f5f7; --ink:#1d1d1f; --muted:#6e6e73; --ink-2:#3a3a3e;
-    --line:#d2d2d7; --accent:#0071e3;
+    --bg:#000000; --bg-soft:#101010; --ink:#f5f5f7; --muted:#a1a1a6; --ink-2:#c7c7cc;
+    --line:#242424; --accent:#2997ff; --ease:cubic-bezier(.2,0,0,1);--t-colour:.16s;--t-enter:.64s;--stagger:70ms;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
   body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.55;letter-spacing:-0.011em}
   a{color:inherit;text-decoration:none}
-  ::selection{background:rgba(0,113,227,.18)}
+  ::selection{background:rgba(41,151,255,.25)}
   @media(prefers-reduced-motion:reduce){*{animation:none!important}}
   .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
 
-  header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+  header{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.78);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
   .skip{position:absolute;left:-9999px}
-  .skip:focus{left:16px;top:12px;z-index:99;background:#fff;padding:8px 14px;border-radius:8px;box-shadow:0 2px 14px rgba(0,0,0,.14);font-size:14px}
+  .skip:focus{left:16px;top:12px;z-index:99;background:#101010;padding:8px 14px;border-radius:8px;box-shadow:0 2px 14px rgba(0,0,0,.6);font-size:14px}
   a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-  .reveal{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}
+  .reveal{opacity:0;transform:translateY(12px);transition:opacity var(--t-enter) var(--ease),transform var(--t-enter) var(--ease)}
   .reveal.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}}
   .nav{display:flex;align-items:center;justify-content:space-between;height:56px;font-size:14px}
   .brand{display:flex;align-items:center;gap:10px;font-weight:600}
-  .mono{width:28px;height:28px;border-radius:7px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;letter-spacing:.02em}
+  .mono{width:28px;height:28px;border-radius:7px;background:#151515;border:1px solid #292929;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;letter-spacing:.02em}
   .nav nav{display:flex;gap:18px;color:var(--muted);font-size:13px}
   .nav nav a{position:relative;padding:4px 0;transition:color .18s}
   .nav nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--accent);border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform .22s ease}
   .nav nav a:hover{color:var(--ink)}
   .nav nav a.active{color:var(--ink)}
   .nav nav a.active::after{transform:scaleX(1)}
-  .nav .cta{color:var(--accent);font-weight:500;border:1.5px solid rgba(0,113,227,.5);border-radius:980px;padding:7px 15px;transition:background .2s}
-  .nav .cta:hover{background:rgba(0,113,227,.08)}
+  .nav .cta{color:var(--accent);font-weight:500;border:1.5px solid rgba(41,151,255,.5);border-radius:980px;padding:7px 15px;transition:background .2s}
+  .nav .cta:hover{background:rgba(41,151,255,.08)}
 
-  .hero{text-align:center;padding:96px 0 72px;position:relative;overflow:hidden}
+  .hero{text-align:left;padding:120px 0 90px;position:relative;overflow:hidden}
   .hero::before{content:"";position:absolute;inset:-20px -20px 0;pointer-events:none;
-    background:radial-gradient(460px 280px at 50% 0%,rgba(0,113,227,.08),transparent 70%)}
+    background:radial-gradient(ellipse 700px 500px at 50% 15%,rgba(41,151,255,.14),transparent 65%)}
   .hero>*{position:relative;animation:heroIn .75s cubic-bezier(.2,.7,.3,1) both}
-  .hero>*:nth-child(2){animation-delay:.07s}
-  .hero>*:nth-child(3){animation-delay:.14s}
-  .hero>*:nth-child(4){animation-delay:.21s}
-  .hero>*:nth-child(5){animation-delay:.28s}
   @keyframes heroIn{from{opacity:0;transform:translateY(18px)}}
   @media(prefers-reduced-motion:reduce){.hero>*{animation:none}}
   .hero .eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
-  h1{font-size:clamp(42px,7.5vw,76px);font-weight:700;letter-spacing:-.025em;line-height:1.05;
-    background:linear-gradient(175deg,#1d1d1f 30%,#42424a 95%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .hero p{color:var(--muted);font-size:clamp(18px,2.3vw,22px);letter-spacing:-.008em;max-width:700px;margin:22px auto 0;line-height:1.45}
+  h1{font-size:clamp(42px,7.5vw,76px);font-weight:600;letter-spacing:-.038em;line-height:1.05;text-wrap:balance;
+    background:linear-gradient(90deg,#ffffff,#8bd0ff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero p{color:var(--muted);font-size:clamp(18px,2.3vw,22px);letter-spacing:-.008em;max-width:640px;margin:22px 0 0;line-height:1.45}
   .hero p b{color:var(--ink);font-weight:600}
-  .hero-facts{margin-top:30px;display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap;font-size:13.5px;color:var(--muted)}
+  .hero-facts{margin-top:30px;display:flex;gap:8px;justify-content:flex-start;align-items:center;flex-wrap:wrap;font-size:13.5px;color:var(--muted)}
   .hero-facts i{font-style:normal;color:var(--line)}
-  .hero-links{margin-top:30px;display:flex;gap:28px;justify-content:center;font-size:17px}
+  .hero-links{margin-top:30px;display:flex;gap:28px;justify-content:flex-start;font-size:17px}
   .hero-links a{color:var(--accent)}
   .hero-links a:hover{text-decoration:underline}
 
   section{padding:72px 0;border-top:1px solid var(--line)}
   section[id]{scroll-margin-top:72px}
-  h2{font-size:clamp(28px,4.5vw,40px);font-weight:700;letter-spacing:-.02em;line-height:1.12}
+  h2{font-size:clamp(28px,4.5vw,40px);font-weight:600;letter-spacing:-.02em;line-height:1.12;text-wrap:balance}
   .section-head{margin-bottom:44px}
-  .section-eyebrow{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);background:rgba(0,113,227,.07);border:1px solid rgba(0,113,227,.18);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+  .section-eyebrow{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);background:rgba(41,151,255,.08);border:1px solid rgba(41,151,255,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
   .section-head p{color:var(--muted);font-size:18.5px;margin-top:14px;max-width:640px;letter-spacing:-.005em;line-height:1.5}
 
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
-  .cell{background:var(--bg-soft);border:1px solid transparent;border-radius:16px;padding:28px 26px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
-  .cell:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.08);border-color:rgba(0,113,227,.16)}
+  .cell{background:var(--bg-soft);border:1px solid #1c1c1e;border-radius:24px;padding:28px 26px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .cell:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(0,0,0,.55);border-color:rgba(41,151,255,.24)}
   .cell h3{font-size:18px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
   .cell p{color:var(--muted);font-size:15.5px;line-height:1.6}
-  .cell .no{font-size:11px;font-weight:600;color:var(--accent);letter-spacing:.09em;margin-bottom:14px;display:inline-block;background:rgba(0,113,227,.07);border:1px solid rgba(0,113,227,.15);padding:4px 10px;border-radius:999px}
+  .cell .no{font-size:11px;font-weight:600;color:var(--accent);letter-spacing:.09em;margin-bottom:14px;display:inline-block;background:rgba(41,151,255,.08);border:1px solid rgba(41,151,255,.2);padding:4px 10px;border-radius:999px}
 
   .profile-cols{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:start}
   .prose{max-width:660px}
   .prose p{color:var(--ink-2);font-size:17px;line-height:1.7;margin-bottom:22px}
   .prose p:last-child{margin-bottom:0}
   .prose b{color:var(--ink);font-weight:600}
-  .facts{background:var(--bg-soft);border-radius:16px;padding:28px 26px}
-  .facts-title{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .facts{background:var(--bg-soft);border-radius:24px;padding:28px 26px;overflow:hidden}
 
   .r-row{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px}
   .r-row:last-child{border-bottom:0}
@@ -138,11 +152,11 @@
   .r-row span:last-child{font-weight:500;text-align:right}
   .r-row a{color:var(--accent)}
   .r-row a:hover{text-decoration:underline;text-underline-offset:3px}
-  .record{margin-top:44px;background:var(--bg-soft);border-radius:16px;padding:36px 34px}
+  .record{margin-top:44px;background:var(--bg-soft);border-radius:24px;padding:36px 34px;overflow:hidden}
 
   .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-  .stat{background:var(--bg-soft);border:1px solid transparent;border-radius:16px;padding:30px 24px;text-align:center;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
-  .stat:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.08);border-color:rgba(0,113,227,.16)}
+  .stat{background:var(--bg-soft);border:1px solid #1c1c1e;border-radius:24px;padding:30px 24px;text-align:center;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .stat:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(0,0,0,.55);border-color:rgba(41,151,255,.24)}
   .stat b{display:block;font-size:40px;font-weight:700;letter-spacing:-.02em}
   .stat span{color:var(--muted);font-size:13.5px;line-height:1.4;display:block;margin-top:4px}
   .metric-note{color:var(--muted);font-size:14.5px;margin-top:18px}
@@ -154,19 +168,20 @@
   .v-row:hover{background:var(--bg-soft)}
   .v-row h3 a:hover{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
   .v-row:last-child{border-bottom:1px solid var(--line)}
-  .vm{width:44px;height:44px;border-radius:11px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex:none}
+  .vm{width:44px;height:44px;border-radius:11px;background:#151515;border:1px solid #292929;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex:none}
   .v-row h3{font-size:17px;font-weight:600}
   .v-row p{color:var(--muted);font-size:15px;line-height:1.55;margin-top:3px}
   .v-tag{margin-left:auto;font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:5px 14px;white-space:nowrap}
-  .v-tag.live{color:#0d7a3e;border-color:rgba(11,140,68,.35);background:rgba(11,140,68,.06)}
+  .v-tag.live{color:#70d7ff;border-color:rgba(112,215,255,.32);background:rgba(112,215,255,.07)}
 
   .channels{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:44px}
-  .channel{background:var(--bg-soft);border:1px solid transparent;border-radius:16px;padding:26px 24px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
-  .channel:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.08);border-color:rgba(0,113,227,.16)}
+  .channel{background:var(--bg-soft);border:1px solid #1c1c1e;border-radius:24px;padding:26px 24px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .channel:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(0,0,0,.55);border-color:rgba(41,151,255,.24)}
   .channel h3{font-size:17px;font-weight:600;margin-bottom:6px}
   .channel .ch-role{display:block;font-size:11.5px;font-weight:600;color:var(--accent);letter-spacing:.09em;text-transform:uppercase;margin-bottom:10px}
   .channel p{color:var(--muted);font-size:14.5px;line-height:1.55;margin-bottom:12px}
   .channel a{color:var(--accent);font-weight:500;font-size:15px}
+  .install a.cmd{font-size:inherit;font-weight:inherit;font-family:inherit}
   .channel a:hover{text-decoration:underline;text-underline-offset:3px}
 
   .contact{text-align:left}
@@ -176,13 +191,31 @@
   footer{border-top:1px solid var(--line);padding:26px 0;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   footer a:hover{text-decoration:underline}
 
+  /* Hana-style macOS window system */
+  .hero-cols{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  @media(max-width:960px){.hero-cols{grid-template-columns:1fr;gap:44px}}
+  .code-win{background:#1e1e20;border:1px solid #2e2e33;border-radius:10px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.65);text-align:left}
+  .win-bar{position:relative;display:flex;align-items:center;gap:7px;height:38px;padding:0 14px;background:#161618;border-bottom:1px solid #2a2a2e}
+  .wd{width:11px;height:11px;border-radius:50%;flex:none}
+  .wd.r{background:#ff5f57}.wd.y{background:#febc2e}.wd.g{background:#28c840}
+  .win-title{position:absolute;left:50%;transform:translateX(-50%);font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:#a0a0a5;white-space:nowrap}
+  .code-lines{padding:20px 0 24px;font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:21px;overflow-x:auto;color:#c7c7cc}
+  .cl{display:flex;gap:14px;padding:0 16px;white-space:pre;opacity:0;transform:translateY(5px)}
+  .cl.in{opacity:1;transform:none;transition:opacity .4s ease,transform .4s ease}
+  .cl i{width:18px;text-align:right;color:#5d6c79;font-style:normal;flex:none;user-select:none}
+  .cl .k{color:#7fb3ff}.cl .f{color:#70d7ff}.cl .s{color:#8bd0ff}.cl .p{color:#2997ff}.cl .c{color:#8e8e93}
+  .facts .win-bar{margin:-28px -26px 22px}
+  .record .win-bar{margin:-36px -34px 26px}
+  @media(max-width:720px){.facts .win-bar{margin:-22px -20px 18px}.record .win-bar{margin:-22px -18px 20px}}
+  @media(prefers-reduced-motion:reduce){.cl{opacity:1;transform:none;transition:none}}
+
   @media(max-width:900px){
     header .wrap.nav{height:auto;flex-wrap:wrap;padding:10px 0;row-gap:8px}
     .nav nav{order:3;width:100%;overflow-x:auto;gap:8px;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px}
     .nav nav::-webkit-scrollbar{display:none}
     .nav nav a{flex:none;background:var(--bg-soft);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:12.5px}
     .nav nav a::after{display:none}
-    .nav nav a.active{color:var(--accent);border-color:rgba(0,113,227,.45);background:rgba(0,113,227,.06)}
+    .nav nav a.active{color:var(--accent);border-color:rgba(41,151,255,.45);background:rgba(41,151,255,.08)}
   }
   @media(max-width:860px){.profile-cols{grid-template-columns:1fr;gap:32px}}
   @media(max-width:720px){
@@ -224,11 +257,13 @@
       <a href="#record">Record</a>
       <a href="#principles">Principles</a>
     </nav>
-    <a class="cta" href="#contact">Inquiries</a>
+    <a class="cta" data-press href="#contact">Inquiries</a>
   </div>
 </header>
 
 <div class="hero wrap" id="top">
+  <div class="hero-cols">
+  <div class="hero-copy">
   <div class="eyebrow">Tariq Chehardy LLC</div>
   <h1>Absolute precision.<br>Built to production.</h1>
   <p><b>Senior expert-level software.</b> Custom code, custom scripts, commissioned programming, and reverse engineering, engineered to production standard from the first line. A private, founder-led company: the person who scopes your work is the person who builds it.</p>
@@ -237,6 +272,26 @@
     <a href="#profile">The company &rsaquo;</a>
     <a href="#specializations">What we do &rsaquo;</a>
     <a href="#ventures">Ventures &rsaquo;</a>
+  </div>
+  </div>
+  <div class="code-win" role="img" aria-label="PowerShell code showing a commissioned delivery from spec to documented handoff">
+    <div class="win-bar"><span class="wd r"></span><span class="wd y"></span><span class="wd g"></span><span class="win-title">handoff.ps1</span><button class="replay" type="button" aria-label="Replay code animation">↻</button></div>
+    <div class="code-lines">
+      <div class="cl"><i>1</i><span><span class="c"># commissioned work, engineered to production</span></span></div>
+      <div class="cl"><i>2</i><span><span class="k">Function</span> <span class="f">Invoke-Delivery</span> {</span></div>
+      <div class="cl"><i>3</i><span>  <span class="k">param</span>([<span class="p">string</span>]$Spec = <span class="s">"absolute-precision"</span>)</span></div>
+      <div class="cl"><i>4</i><span> </span></div>
+      <div class="cl"><i>5</i><span>  $build = <span class="f">Start-Build</span> $Spec <span class="s">"production"</span></span></div>
+      <div class="cl"><i>6</i><span>  $build | <span class="f">Test-Quality</span> -PassRate 100</span></div>
+      <div class="cl"><i>7</i><span>  $build | <span class="f">Write-Documentation</span> -Complete</span></div>
+      <div class="cl"><i>8</i><span> </span></div>
+      <div class="cl"><i>9</i><span>  <span class="k">return</span> $build | <span class="f">Complete-Handoff</span> -OnSchedule</span></div>
+      <div class="cl"><i>10</i><span>}</span></div>
+      <div class="cl"><i>11</i><span> </span></div>
+      <div class="cl"><i>12</i><span><span class="c"># one scope. one builder. zero handoffs.</span></span></div>
+      <div class="cl"><i>13</i><span><span class="f">Invoke-Delivery</span></span></div>
+    </div>
+  </div>
   </div>
 </div>
 
@@ -253,7 +308,7 @@
       <p>The company operates in the open where it can. Products and releases are published publicly, company records are maintained on this site, and every engagement runs on written scope, fixed estimates, and direct contact with the founder. Discretion is the default for client work; transparency is the default for everything else.</p>
     </div>
     <div class="facts">
-      <div class="facts-title">At a glance</div>
+      <div class="win-bar"><span class="wd r"></span><span class="wd y"></span><span class="wd g"></span><span class="win-title">at a glance</span></div>
       <div class="r-row"><span>Founded</span><span>2020 · California</span></div>
       <div class="r-row"><span>Headquarters</span><span>Dallas, TX</span></div>
       <div class="r-row"><span>Structure</span><span>Private LLC · founder-led</span></div>
@@ -354,13 +409,14 @@
     <p>This site is the official public record of Tariq Chehardy LLC: company and personal public records, published and hosted right here.</p>
   </div>
   <div class="record">
+    <div class="win-bar"><span class="wd r"></span><span class="wd y"></span><span class="wd g"></span><span class="win-title">official record</span></div>
     <div class="r-row"><span>Legal name</span><span>Tariq Chehardy LLC</span></div>
     <div class="r-row"><span>Entity type</span><span>Limited Liability Company · private, founder-led</span></div>
     <div class="r-row"><span>Founded</span><span>2020</span></div>
     <div class="r-row"><span>Founder</span><span>Tariq Chehardy · born 05/15/1989 🎂</span></div>
     <div class="r-row"><span>Focus</span><span>Custom code · Commissioned programming · Reverse engineering</span></div>
     <div class="r-row"><span>Official site</span><span>Hosted on GitHub Pages</span></div>
-    <div class="r-row"><span>Official channel</span><span><a href="https://github.com/tariqchehardyllc">github.com/tariqchehardyllc</a></span></div>
+    <div class="r-row"><span>Official channel</span><span><a href="https://github.com/tariqchehardy-io">github.com/tariqchehardy-io</a></span></div>
     <div class="r-row"><span>X / Twitter</span><span><a href="https://x.com/TariqChehardy">@TariqChehardy</a></span></div>
     <div class="r-row"><span>Email</span><span><a href="mailto:TariqChehardy@gmail.com">TariqChehardy@gmail.com</a></span></div>
     <div class="r-row"><span>Business address</span><span>4502 Gaston Ave, Apt 119, Dallas, TX 75246</span></div>
@@ -396,13 +452,13 @@
         <span class="ch-role">Primary · commissioned work</span>
         <h3>Email</h3>
         <p>Commissioned work, partnerships, and business. Include scope for the fastest response.</p>
-        <a href="mailto:TariqChehardy@gmail.com">TariqChehardy@gmail.com</a>
+        <div class="install"><a class="cmd" href="mailto:TariqChehardy@gmail.com">TariqChehardy@gmail.com</a><button class="copy" type="button" data-copy="TariqChehardy@gmail.com" aria-label="Copy email address"><span class="faces"><span class="face">copy</span><span class="face face-in">copied</span></span></button></div>
       </div>
       <div class="channel">
         <span class="ch-role">Public code &amp; releases</span>
         <h3>GitHub</h3>
         <p>Public repositories, releases, and product records. Issues stay public and documented.</p>
-        <a href="https://github.com/tariqchehardyllc">github.com/tariqchehardyllc</a>
+        <a href="https://github.com/tariqchehardy-io">github.com/tariqchehardy-io</a>
       </div>
       <div class="channel">
         <span class="ch-role">Announcements only</span>
@@ -417,7 +473,7 @@
 
 <footer class="wrap">
   <div>© 2026 Tariq Chehardy LLC. All rights reserved.</div>
-  <div>Official site · <a href="https://github.com/tariqchehardyllc">GitHub</a> · <a href="https://x.com/TariqChehardy">X</a> · Hosted on GitHub Pages</div>
+  <div>Official site · <a href="https://github.com/tariqchehardy-io">GitHub</a> · <a href="https://x.com/TariqChehardy">X</a> · Hosted on GitHub Pages</div>
 </footer>
 
 <script>
@@ -431,7 +487,7 @@
   setTimeout(hide, 2500);
 })();
   var list = document.getElementById("product-list");
-  list.innerHTML = '<p style="color:#6e6e73;font-size:15px">Loading index…</p>';
+  list.innerHTML = '<p style="color:#a1a1a6;font-size:15px">Loading index…</p>';
   fetch("products.json", { cache: "no-store" })
     .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
     .then(function (data) {
@@ -447,20 +503,20 @@
           release + "</div>";
       });
       if (!items.length) {
-        list.innerHTML = '<p style="color:#6e6e73;font-size:15px">New products and releases publish here automatically as they are confirmed.</p>';
+        list.innerHTML = '<p style="color:#a1a1a6;font-size:15px">New products and releases publish here automatically as they are confirmed.</p>';
       } else {
         list.innerHTML = items.join("");
       }
     })
     .catch(function () {
-      list.innerHTML = '<p style="color:#6e6e73;font-size:15px">Product index is updating. Refresh shortly.</p>';
+      list.innerHTML = '<p style="color:#a1a1a6;font-size:15px">Product index is updating. Refresh shortly.</p>';
     });
   /* reveal: section heads + record blocks as units; grids stagger per child */
   document.querySelectorAll(".section-head, .record, .profile-cols, .prose").forEach(function (el) { el.classList.add("reveal"); });
   document.querySelectorAll(".grid, .ventures, .channels").forEach(function (grid) {
     Array.prototype.forEach.call(grid.children, function (child, i) {
       child.classList.add("reveal");
-      child.style.transitionDelay = Math.min(i * 60, 420) + "ms";
+      child.style.transitionDelay = Math.min(i * 70, 490) + "ms";
     });
   });
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -509,6 +565,26 @@
     }, { threshold: .5 });
     els.forEach(function (el) { obs.observe(el); });
   })();
+  /* hero code window: staggered type-in, replayable */
+  var runCode = function () {
+    var lines = document.querySelectorAll(".code-lines .cl");
+    if (!lines.length) return;
+    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) { lines.forEach(function (l) { l.classList.add("in"); }); return; }
+    for (var i = 0; i < lines.length; i++) {
+      (function (idx) { setTimeout(function () { lines[idx].classList.remove("in"); void lines[idx].offsetWidth; lines[idx].classList.add("in"); }, 260 + idx * 130); })(i);
+    }
+  };
+  runCode();
+  document.querySelectorAll(".replay").forEach(function (b) { b.addEventListener("click", runCode); });
+  document.querySelectorAll("[data-copy]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      if (navigator.clipboard) navigator.clipboard.writeText(btn.getAttribute("data-copy")).catch(function () {});
+      btn.classList.add("copied");
+      setTimeout(function () { btn.classList.remove("copied"); }, 1400);
+    });
+  });
+
   function escapeHtml(s) {
     return s.replace(/[&<>"']/g, function (ch) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
