@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-20T03:09:09.600380+00:00",
+  "generated_at": "2026-09-21T03:09:04.047014+00:00",
   "products": [
     {
       "name": "poke-core",
       "description": "Core identity, persona, and specialized toolset for Poke, the premier personal superintelligence. Source published for inspection only; proprietary product of Privacy+ Technologies Inc.",
       "url": "https://github.com/pokedot-ai/poke-core",
-      "language": "",
+      "language": "Python",
       "stars": 0,
       "pushed": "2026-09-20",
       "featured": true,
